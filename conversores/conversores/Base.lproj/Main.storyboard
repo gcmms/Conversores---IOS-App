@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DgF-4d-iYA">
+                            <view contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DgF-4d-iYA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-ko-4Px">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-ko-4Px">
                                         <rect key="frame" x="112" y="40" width="190" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="a00-ea-bAu"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa7-Jz-3vt">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa7-Jz-3vt">
                                         <rect key="frame" x="344" y="41" width="33" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="28"/>
                                         <state key="normal" title="&gt;&gt;">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,6 +74,12 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="R4d-ko-4Px" firstAttribute="top" secondItem="DgF-4d-iYA" secondAttribute="top" constant="20" id="PkW-VN-iDO"/>
+                                    <constraint firstAttribute="width" constant="414" id="dY7-T1-Fs9"/>
+                                    <constraint firstItem="R4d-ko-4Px" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="20" id="dhb-ny-Qba"/>
+                                    <constraint firstItem="fa7-Jz-3vt" firstAttribute="leading" secondItem="R4d-ko-4Px" secondAttribute="trailing" constant="20" id="lRl-TY-Tx1"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-0u-sxQ">
                                 <rect key="frame" x="176" y="449" width="62" height="115"/>
@@ -91,6 +97,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DgF-4d-iYA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GhT-I2-7LP"/>
+                            <constraint firstItem="DgF-4d-iYA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cD7-1Q-XXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DgF-4d-iYA" secondAttribute="trailing" id="f1C-Jo-8sH"/>
+                            <constraint firstItem="DgF-4d-iYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s8x-Sr-Nap"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -98,6 +110,7 @@
                         <outlet property="btUnit2" destination="GxO-hS-Q2N" id="Nnl-LE-Xru"/>
                         <outlet property="lbResultado" destination="OMj-0u-sxQ" id="Ja0-8p-gd9"/>
                         <outlet property="lbResultado1" destination="nsw-kn-PI2" id="96S-Lt-BMV"/>
+                        <outlet property="lbUnit" destination="R4d-ko-4Px" id="GYU-yS-SwG"/>
                         <outlet property="tfValor" destination="Q6H-jV-xU7" id="6Ts-pf-KAB"/>
                     </connections>
                 </viewController>
