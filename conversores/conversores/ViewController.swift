@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             }
             sender.alpha = 1.0
         }
-        var lbText = lbUnit.text!
+        let lbText = lbUnit.text!
         switch lbText {
         case "Temperatura":
             calcTemperatura()
