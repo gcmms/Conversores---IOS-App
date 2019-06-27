@@ -9,40 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var tfValor: UITextField!
-    
-    @IBOutlet weak var btUnit1: UIButton!
-    @IBOutlet weak var btUnit2: UIButton!
-    @IBOutlet weak var lbResultado: UILabel!
-    @IBOutlet weak var lbResultadoUnit: UILabel!
+    //texto do que esta sendo convertido
     @IBOutlet weak var lbUnit: UILabel!
+    //caixa de inserir texto!
+    @IBOutlet weak var tfValor: UITextField!
+    //bitão1
+    @IBOutlet weak var btUnit1: UIButton!
+    //botao2
+    @IBOutlet weak var btUnit2: UIButton!
+    //resultado
+    @IBOutlet weak var lbResultado: UILabel!
+    //@IBOutlet weak var lbResultadoUnit: UILabel!
+    @IBOutlet weak var lbResultadoUnit: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
     @IBAction func showNext(_ sender: UIButton) {
-        var lbText = lbUnit.text!
-        //var bt1    = btUnit1
-        //var bt2    = btUnit2
-        switch lbText {
+        switch lbUnit.text! {
         case "Temperatura":
-            lbText = "Peso"
+            lbUnit.text = "Peso"
             btUnit1.setTitle("Kilograma", for: .normal)
-            btUnit1.setTitle("Libra", for: .normal)
+            btUnit2.setTitle("Libra", for: .normal)
         case "Peso":
-            lbText = "Moeda"
+            lbUnit.text = "Moeda"
             btUnit1.setTitle("Real", for: .normal)
-            btUnit1.setTitle("Dolar", for: .normal)
+            btUnit2.setTitle("Dolar", for: .normal)
         case "Moeda":
-            lbText = "Distancia"
+            lbUnit.text = "Distancia"
             btUnit1.setTitle("Metro", for: .normal)
-            btUnit1.setTitle("Kilometro", for: .normal)
+            btUnit2.setTitle("Kilometro", for: .normal)
         default:
-            lbText = "Temperatura"
+            lbUnit.text = "Temperatura"
             btUnit1.setTitle("Celcius", for: .normal)
-            btUnit1.setTitle("Farenheint", for: .normal)
+            btUnit2.setTitle("Farenheint", for: .normal)
         
         }
         converter(nil)
@@ -57,20 +61,23 @@ class ViewController: UIViewController {
             }
             sender.alpha = 1.0
         }
-        let lbText = lbUnit.text!
-        switch lbText {
+       
+        switch lbUnit.text!{
         case "Temperatura":
             calcTemperatura()
         case "Peso":
+            //teste()
             calcPeso()
         case "Moeda":
+            //teste()
             calcMoeda()
         default:
+            //teste()
             calcDistancia()
             
         }
     }
-    
+
     func calcTemperatura(){
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
