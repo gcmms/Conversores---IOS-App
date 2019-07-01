@@ -90,6 +90,11 @@
                                     <constraint firstAttribute="height" constant="357" id="opO-Z4-S5S"/>
                                     <constraint firstItem="NdY-A5-8SB" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="20" id="s1z-y4-Egg"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-0u-sxQ">
                                 <rect key="frame" x="176" y="449" width="62" height="115"/>
