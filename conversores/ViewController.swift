@@ -19,6 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var btUnit2: UIButton!
     //resultado
     @IBOutlet weak var lbResultado: UILabel!
+    //Variavel do resultado
+    var resultado: String! {
+        didSet {
+            lbResultado.text = resultado.maxLength(length: 7)
+        }
+    }
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
     
@@ -82,10 +88,10 @@ class ViewController: UIViewController {
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Farenheit"
-            lbResultado.text = String(temperatura * 1.8 + 32.0)
+            resultado = String(temperatura * 1.8 + 32.0)
         } else {
             lbResultadoUnit.text = "Celcius"
-            lbResultado.text = String((temperatura - 32 ) / 1.8)
+            resultado = String((temperatura - 32 ) / 1.8)
         }
     }
     
@@ -93,10 +99,10 @@ class ViewController: UIViewController {
         guard let peso = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Libra"
-            lbResultado.text = String(peso / 2.2046)
+            resultado = String(peso / 2.2046)
         } else {
             lbResultadoUnit.text = "Kilograma"
-            lbResultado.text = String(peso * 2.2046)
+            resultado = String(peso * 2.2046)
         }
         
     }
@@ -105,10 +111,10 @@ class ViewController: UIViewController {
         guard let moeda = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Dolar"
-            lbResultado.text = String(moeda * 3.5)
+            resultado = String(moeda * 3.5)
         } else {
             lbResultadoUnit.text = "Real"
-            lbResultado.text = String(moeda / 3.5)
+            resultado = String(moeda / 3.5)
         }
     }
     
@@ -116,11 +122,25 @@ class ViewController: UIViewController {
         guard let distancia = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Kilometro"
-            lbResultado.text = String(distancia / 1000.0)
+            resultado = String(distancia / 1000.0)
         } else {
             lbResultadoUnit.text = "Metros"
-            lbResultado.text = String(distancia * 1000.0)
+            resultado = String(distancia * 1000.0)
         }
     }
 }
 
+extension String {
+   func maxLength(length: Int) -> String {
+       var str = self
+       let nsString = str as NSString
+       if nsString.length >= length {
+           str = nsString.substring(with:
+               NSRange(
+                location: 0,
+                length: nsString.length > length ? length : nsString.length)
+           )
+       }
+       return  str
+   }
+}
