@@ -8,9 +8,18 @@
 
 import UIKit
 
+enum Grandeza: String {
+    case temperatura = "Temperatura"
+    case peso = "Peso"
+    case moeda = "Moeda"
+    case distancia = "Distancia"
+}
+
+
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
     @IBOutlet weak var lbUnit: UILabel!
+    var grandezaPath: Grandeza = .temperatura
     //caixa de inserir texto!
     @IBOutlet weak var tfValor: UITextField!
     //bitão1
