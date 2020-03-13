@@ -24,15 +24,29 @@ class ViewController: UIViewController {
             lbResultado.text = String(resultado).maxLength(length: 7)
         }
     }
-    @IBOutlet weak var grandezaAtual: UILabel!
+    @IBOutlet weak var lbGrandezaAtual: UILabel!
+    var grandezaAtual: String = "" {
+        didSet {
+            lbGrandezaAtual.text = grandezaAtual
+        }
+    }
     
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
+    var grandezaConvertida: String = "" {
+        didSet {
+            lbResultadoUnit.text = grandezaConvertida
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // ResetApp
+        grandezaAtual = "Celcius"
+        resultado = 0.0
+        grandezaConvertida = "Selecione"
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,9 +95,7 @@ class ViewController: UIViewController {
         case "Moeda":
             calcMoeda()
         default:
-            //teste()
             calcDistancia()
-            
         }
     }
 
@@ -97,10 +109,12 @@ extension ViewController {
     func calcTemperatura(){
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Farenheit"
+            grandezaConvertida = "Farenheit"
+            grandezaAtual = "Celcius"
             resultado = (temperatura * 1.8) + 32.0
         } else {
-            lbResultadoUnit.text = "Celcius"
+            grandezaConvertida = "Celcius"
+            grandezaAtual = "Farenheit"
             resultado = (temperatura - 32 ) / 1.8
         }
     }
@@ -108,10 +122,12 @@ extension ViewController {
     func calcPeso(){
         guard let peso = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Libra"
+            grandezaConvertida = "Libra"
+            grandezaAtual = "Kilograma"
             resultado = peso / 2.2046
         } else {
-            lbResultadoUnit.text = "Kilograma"
+            grandezaConvertida = "Kilograma"
+            grandezaAtual = "Libra"
             resultado = peso * 2.2046
         }
     }
@@ -119,10 +135,12 @@ extension ViewController {
     func calcMoeda(){
         guard let moeda = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Dolar"
+            grandezaConvertida = "Dolar"
+            grandezaAtual = "Real"
             resultado = moeda * 3.5
         } else {
-            lbResultadoUnit.text = "Real"
+            grandezaConvertida = "Real"
+            grandezaAtual = "Dolar"
             resultado = moeda / 3.5
         }
     }
@@ -130,10 +148,12 @@ extension ViewController {
     func calcDistancia(){
         guard let distancia = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Kilometro"
+            grandezaConvertida = "Kilometro"
+            grandezaAtual = "Metros"
             resultado = distancia / 1000.0
         } else {
-            lbResultadoUnit.text = "Metros"
+            grandezaConvertida = "Metros"
+            grandezaAtual = "Kilometro"
             resultado = distancia * 1000.0
         }
     }

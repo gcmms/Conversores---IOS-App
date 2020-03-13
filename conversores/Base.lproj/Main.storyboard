@@ -70,9 +70,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrandezaAtual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC6-mV-73o">
-                                        <rect key="frame" x="148" y="226" width="119" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrandezaAtual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC6-mV-73o">
+                                        <rect key="frame" x="127" y="226" width="160" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -82,21 +82,22 @@
                                     <constraint firstItem="Q6H-jV-xU7" firstAttribute="top" secondItem="R4d-ko-4Px" secondAttribute="bottom" constant="72" id="1rb-sb-dEc"/>
                                     <constraint firstAttribute="bottom" secondItem="GxO-hS-Q2N" secondAttribute="bottom" constant="8" id="3fg-tS-eBu"/>
                                     <constraint firstAttribute="bottom" secondItem="NdY-A5-8SB" secondAttribute="bottom" constant="8" id="7fg-fK-sOI"/>
-                                    <constraint firstAttribute="trailing" secondItem="YC6-mV-73o" secondAttribute="trailing" constant="147" id="AA6-oY-icX"/>
                                     <constraint firstAttribute="trailing" secondItem="GxO-hS-Q2N" secondAttribute="trailing" constant="20" id="CFa-WQ-eHo"/>
                                     <constraint firstAttribute="trailing" secondItem="GxO-hS-Q2N" secondAttribute="trailing" constant="20" id="HAT-0O-T28"/>
+                                    <constraint firstItem="YC6-mV-73o" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="127" id="JqK-s7-RJP"/>
                                     <constraint firstAttribute="width" constant="414" id="KDU-AF-qID"/>
                                     <constraint firstItem="Q6H-jV-xU7" firstAttribute="centerX" secondItem="DgF-4d-iYA" secondAttribute="centerX" id="MA9-g2-TUG"/>
+                                    <constraint firstItem="NdY-A5-8SB" firstAttribute="top" secondItem="YC6-mV-73o" secondAttribute="bottom" constant="51" id="OHg-ru-oXS"/>
+                                    <constraint firstItem="YC6-mV-73o" firstAttribute="top" secondItem="Q6H-jV-xU7" secondAttribute="bottom" constant="8" id="RGC-c4-Wjb"/>
                                     <constraint firstItem="YC6-mV-73o" firstAttribute="top" secondItem="Q6H-jV-xU7" secondAttribute="bottom" constant="8" id="W1z-5V-8eJ"/>
                                     <constraint firstItem="fa7-Jz-3vt" firstAttribute="top" secondItem="DgF-4d-iYA" secondAttribute="top" constant="44" id="WbL-Zo-CNv"/>
                                     <constraint firstItem="R4d-ko-4Px" firstAttribute="top" secondItem="DgF-4d-iYA" secondAttribute="top" constant="44" id="ccx-Oa-zTd"/>
                                     <constraint firstAttribute="trailing" secondItem="fa7-Jz-3vt" secondAttribute="trailing" constant="20" id="dBY-nU-DkQ"/>
                                     <constraint firstAttribute="width" secondItem="DgF-4d-iYA" secondAttribute="height" multiplier="138:119" id="dcj-rt-sFQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="YC6-mV-73o" secondAttribute="bottom" constant="110" id="ea9-Cl-8DE"/>
                                     <constraint firstItem="R4d-ko-4Px" firstAttribute="centerX" secondItem="DgF-4d-iYA" secondAttribute="centerX" id="hr4-za-kGD"/>
+                                    <constraint firstAttribute="trailing" secondItem="YC6-mV-73o" secondAttribute="trailing" constant="127" id="ndd-C5-BDB"/>
                                     <constraint firstAttribute="height" constant="357" id="opO-Z4-S5S"/>
                                     <constraint firstItem="NdY-A5-8SB" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="20" id="s1z-y4-Egg"/>
-                                    <constraint firstItem="YC6-mV-73o" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="148" id="y1Z-vs-iXc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -136,7 +137,7 @@
                     <connections>
                         <outlet property="btUnit1" destination="NdY-A5-8SB" id="Rb3-YA-cQi"/>
                         <outlet property="btUnit2" destination="GxO-hS-Q2N" id="Nnl-LE-Xru"/>
-                        <outlet property="grandezaAtual" destination="YC6-mV-73o" id="Juy-2v-eWO"/>
+                        <outlet property="lbGrandezaAtual" destination="YC6-mV-73o" id="Juy-2v-eWO"/>
                         <outlet property="lbResultado" destination="OMj-0u-sxQ" id="Ja0-8p-gd9"/>
                         <outlet property="lbResultadoUnit" destination="nsw-kn-PI2" id="DTn-xM-TLy"/>
                         <outlet property="lbUnit" destination="R4d-ko-4Px" id="GYU-yS-SwG"/>
