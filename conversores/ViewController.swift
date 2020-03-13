@@ -24,7 +24,8 @@ class ViewController: UIViewController {
             lbResultado.text = String(resultado).maxLength(length: 7)
         }
     }
-
+    @IBOutlet weak var grandezaAtual: UILabel!
+    
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
     
