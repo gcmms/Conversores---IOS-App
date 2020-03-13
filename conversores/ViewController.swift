@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var btUnit2: UIButton!
     //resultado
     @IBOutlet weak var lbResultado: UILabel!
-    var teste = "jhvkl"
     //Variavel do resultado
     var resultado: String! {
         didSet {
