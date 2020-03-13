@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D26AF99241C172900D92412 /* Temperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D26AF98241C172900D92412 /* Temperatura.swift */; };
 		0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC078D923EF287B001D52AB /* teste.storyboard */; };
-		0DC8C4C523BD2B79008152B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC8C4C423BD2B79008152B0 /* HomeViewController.swift */; };
-		0DF3954B23B062C9003E086F /* Temperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3954A23B062C9003E086F /* Temperatura.swift */; };
+		0DE3C4E1241C19D100E2D00D /* Temperatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E0241C19D100E2D00D /* Temperatura.swift */; };
+		0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */; };
 		5191732E22C4FA8100F86227 /* calculos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191732D22C4FA8000F86227 /* calculos.swift */; };
 		51ECA4C122C2A34F007D7DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */; };
 		51ECA4C322C2A34F007D7DEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ECA4C222C2A34F007D7DEE /* ViewController.swift */; };
@@ -19,9 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D26AF98241C172900D92412 /* Temperatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Temperatura.swift; path = conversores/Model/Grandeza/Temperatura/Temperatura.swift; sourceTree = "<group>"; };
 		0DC078DA23EF287B001D52AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/teste.storyboard; sourceTree = "<group>"; };
-		0DC8C4C423BD2B79008152B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0DF3954A23B062C9003E086F /* Temperatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Temperatura.swift; path = Temperatura/Temperatura.swift; sourceTree = "<group>"; };
+		0DE3C4E0241C19D100E2D00D /* Temperatura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperatura.swift; sourceTree = "<group>"; };
+		0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5191732D22C4FA8000F86227 /* calculos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculos.swift; sourceTree = "<group>"; };
 		51ECA4BD22C2A34F007D7DEE /* conversores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conversores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,25 +45,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DC8C4C123BD2B21008152B0 /* novoAPP */ = {
+		0DE3C4DD241C19D100E2D00D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DC8C4C423BD2B79008152B0 /* HomeViewController.swift */,
+				0DE3C4DE241C19D100E2D00D /* Grandeza */,
+				0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */,
 			);
-			name = novoAPP;
+			name = Model;
+			path = conversores/Model;
 			sourceTree = "<group>";
 		};
-		0DF3954623B06249003E086F /* conversor */ = {
+		0DE3C4DE241C19D100E2D00D /* Grandeza */ = {
 			isa = PBXGroup;
 			children = (
-				0DF3954A23B062C9003E086F /* Temperatura.swift */,
+				0DE3C4DF241C19D100E2D00D /* Temperatura */,
 			);
-			name = conversor;
+			path = Grandeza;
+			sourceTree = "<group>";
+		};
+		0DE3C4DF241C19D100E2D00D /* Temperatura */ = {
+			isa = PBXGroup;
+			children = (
+				0DE3C4E0241C19D100E2D00D /* Temperatura.swift */,
+			);
+			path = Temperatura;
 			sourceTree = "<group>";
 		};
 		51ECA4B422C2A34F007D7DEE = {
 			isa = PBXGroup;
 			children = (
+				0D26AF98241C172900D92412 /* Temperatura.swift */,
+				0DE3C4DD241C19D100E2D00D /* Model */,
 				51ECA4BF22C2A34F007D7DEE /* conversores */,
 				51ECA4BE22C2A34F007D7DEE /* Products */,
 			);
@@ -78,8 +92,6 @@
 		51ECA4BF22C2A34F007D7DEE /* conversores */ = {
 			isa = PBXGroup;
 			children = (
-				0DC8C4C123BD2B21008152B0 /* novoAPP */,
-				0DF3954623B06249003E086F /* conversor */,
 				51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */,
 				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
 				0DC078D923EF287B001D52AB /* teste.storyboard */,
@@ -164,10 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DC8C4C523BD2B79008152B0 /* HomeViewController.swift in Sources */,
 				51ECA4C322C2A34F007D7DEE /* ViewController.swift in Sources */,
-				0DF3954B23B062C9003E086F /* Temperatura.swift in Sources */,
 				51ECA4C122C2A34F007D7DEE /* AppDelegate.swift in Sources */,
+				0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */,
+				0D26AF99241C172900D92412 /* Temperatura.swift in Sources */,
+				0DE3C4E1241C19D100E2D00D /* Temperatura.swift in Sources */,
 				5191732E22C4FA8100F86227 /* calculos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

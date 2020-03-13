@@ -19,28 +19,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var btUnit2: UIButton!
     //resultado
     @IBOutlet weak var lbResultado: UILabel!
-    var teste = "jhvkl"
-    //Variavel do resultado
-    var resultado: String! {
+    var resultado: Double = 0.0 {
         didSet {
-            lbResultado.text = resultado.maxLength(length: 7)
+            lbResultado.text = String(resultado).maxLength(length: 7)
         }
     }
+    @IBOutlet weak var lbGrandezaAtual: UILabel!
+    var grandezaAtual: String = "" {
+        didSet {
+            lbGrandezaAtual.text = grandezaAtual
+        }
+    }
+    
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
+    var grandezaConvertida: String = "" {
+        didSet {
+            lbResultadoUnit.text = grandezaConvertida
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // ResetApp
+        grandezaAtual = "Celcius"
+        resultado = 0.0
+        grandezaConvertida = "Selecione"
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
-
     
     @IBAction func showNext(_ sender: UIButton) {
         switch lbUnit.text! {
@@ -79,80 +91,70 @@ class ViewController: UIViewController {
         case "Temperatura":
             calcTemperatura()
         case "Peso":
-            //teste()
             calcPeso()
         case "Moeda":
-            //teste()
             calcMoeda()
         default:
-            //teste()
             calcDistancia()
-            
         }
     }
 
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
+
+//Metodos de Calcular
+extension ViewController {
     func calcTemperatura(){
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Farenheit"
-            resultado = String(temperatura * 1.8 + 32.0)
+            grandezaConvertida = "Farenheit"
+            grandezaAtual = "Celcius"
+            resultado = (temperatura * 1.8) + 32.0
         } else {
-            lbResultadoUnit.text = "Celcius"
-            resultado = String((temperatura - 32 ) / 1.8)
+            grandezaConvertida = "Celcius"
+            grandezaAtual = "Farenheit"
+            resultado = (temperatura - 32 ) / 1.8
         }
     }
     
     func calcPeso(){
         guard let peso = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Libra"
-            resultado = String(peso / 2.2046)
+            grandezaConvertida = "Libra"
+            grandezaAtual = "Kilograma"
+            resultado = peso / 2.2046
         } else {
-            lbResultadoUnit.text = "Kilograma"
-            resultado = String(peso * 2.2046)
+            grandezaConvertida = "Kilograma"
+            grandezaAtual = "Libra"
+            resultado = peso * 2.2046
         }
-        
     }
     
     func calcMoeda(){
         guard let moeda = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Dolar"
-            resultado = String(moeda * 3.5)
+            grandezaConvertida = "Dolar"
+            grandezaAtual = "Real"
+            resultado = moeda * 3.5
         } else {
-            lbResultadoUnit.text = "Real"
-            resultado = String(moeda / 3.5)
+            grandezaConvertida = "Real"
+            grandezaAtual = "Dolar"
+            resultado = moeda / 3.5
         }
     }
     
     func calcDistancia(){
         guard let distancia = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Kilometro"
-            resultado = String(distancia / 1000.0)
+            grandezaConvertida = "Kilometro"
+            grandezaAtual = "Metros"
+            resultado = distancia / 1000.0
         } else {
-            lbResultadoUnit.text = "Metros"
-            resultado = String(distancia * 1000.0)
+            grandezaConvertida = "Metros"
+            grandezaAtual = "Kilometro"
+            resultado = distancia * 1000.0
         }
     }
-    
-    func dismissKeyboard(){
-        //textField.resignFirstResponder()
-        view.endEditing(true)
-    }
-}
-
-extension String {
-   func maxLength(length: Int) -> String {
-       var str = self
-       let nsString = str as NSString
-       if nsString.length >= length {
-           str = nsString.substring(with:
-               NSRange(
-                location: 0,
-                length: nsString.length > length ? length : nsString.length)
-           )
-       }
-       return  str
-   }
 }

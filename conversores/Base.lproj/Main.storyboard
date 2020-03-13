@@ -68,8 +68,14 @@
                                         </constraints>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrandezaAtual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC6-mV-73o">
+                                        <rect key="frame" x="127" y="226" width="160" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.52941176470588236" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -78,13 +84,18 @@
                                     <constraint firstAttribute="bottom" secondItem="NdY-A5-8SB" secondAttribute="bottom" constant="8" id="7fg-fK-sOI"/>
                                     <constraint firstAttribute="trailing" secondItem="GxO-hS-Q2N" secondAttribute="trailing" constant="20" id="CFa-WQ-eHo"/>
                                     <constraint firstAttribute="trailing" secondItem="GxO-hS-Q2N" secondAttribute="trailing" constant="20" id="HAT-0O-T28"/>
+                                    <constraint firstItem="YC6-mV-73o" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="127" id="JqK-s7-RJP"/>
                                     <constraint firstAttribute="width" constant="414" id="KDU-AF-qID"/>
                                     <constraint firstItem="Q6H-jV-xU7" firstAttribute="centerX" secondItem="DgF-4d-iYA" secondAttribute="centerX" id="MA9-g2-TUG"/>
+                                    <constraint firstItem="NdY-A5-8SB" firstAttribute="top" secondItem="YC6-mV-73o" secondAttribute="bottom" constant="51" id="OHg-ru-oXS"/>
+                                    <constraint firstItem="YC6-mV-73o" firstAttribute="top" secondItem="Q6H-jV-xU7" secondAttribute="bottom" constant="8" id="RGC-c4-Wjb"/>
+                                    <constraint firstItem="YC6-mV-73o" firstAttribute="top" secondItem="Q6H-jV-xU7" secondAttribute="bottom" constant="8" id="W1z-5V-8eJ"/>
                                     <constraint firstItem="fa7-Jz-3vt" firstAttribute="top" secondItem="DgF-4d-iYA" secondAttribute="top" constant="44" id="WbL-Zo-CNv"/>
                                     <constraint firstItem="R4d-ko-4Px" firstAttribute="top" secondItem="DgF-4d-iYA" secondAttribute="top" constant="44" id="ccx-Oa-zTd"/>
                                     <constraint firstAttribute="trailing" secondItem="fa7-Jz-3vt" secondAttribute="trailing" constant="20" id="dBY-nU-DkQ"/>
                                     <constraint firstAttribute="width" secondItem="DgF-4d-iYA" secondAttribute="height" multiplier="138:119" id="dcj-rt-sFQ"/>
                                     <constraint firstItem="R4d-ko-4Px" firstAttribute="centerX" secondItem="DgF-4d-iYA" secondAttribute="centerX" id="hr4-za-kGD"/>
+                                    <constraint firstAttribute="trailing" secondItem="YC6-mV-73o" secondAttribute="trailing" constant="127" id="ndd-C5-BDB"/>
                                     <constraint firstAttribute="height" constant="357" id="opO-Z4-S5S"/>
                                     <constraint firstItem="NdY-A5-8SB" firstAttribute="leading" secondItem="DgF-4d-iYA" secondAttribute="leading" constant="20" id="s1z-y4-Egg"/>
                                 </constraints>
@@ -126,6 +137,7 @@
                     <connections>
                         <outlet property="btUnit1" destination="NdY-A5-8SB" id="Rb3-YA-cQi"/>
                         <outlet property="btUnit2" destination="GxO-hS-Q2N" id="Nnl-LE-Xru"/>
+                        <outlet property="lbGrandezaAtual" destination="YC6-mV-73o" id="Juy-2v-eWO"/>
                         <outlet property="lbResultado" destination="OMj-0u-sxQ" id="Ja0-8p-gd9"/>
                         <outlet property="lbResultadoUnit" destination="nsw-kn-PI2" id="DTn-xM-TLy"/>
                         <outlet property="lbUnit" destination="R4d-ko-4Px" id="GYU-yS-SwG"/>
@@ -134,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342" y="94"/>
+            <point key="canvasLocation" x="-342.02898550724638" y="93.75"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="2A7-G4-a6Y">
