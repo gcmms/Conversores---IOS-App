@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var btUnit2: UIButton!
     //resultado
     @IBOutlet weak var lbResultado: UILabel!
-    //Variavel do resultado
-    var resultado: String! {
+    var resultado: Double = 0.0 {
         didSet {
-            lbResultado.text = resultado.maxLength(length: 7)
+            lbResultado.text = String(resultado).maxLength(length: 7)
         }
     }
+
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
     
@@ -38,8 +38,6 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
-
     
     @IBAction func showNext(_ sender: UIButton) {
         switch lbUnit.text! {
@@ -78,10 +76,8 @@ class ViewController: UIViewController {
         case "Temperatura":
             calcTemperatura()
         case "Peso":
-            //teste()
             calcPeso()
         case "Moeda":
-            //teste()
             calcMoeda()
         default:
             //teste()
@@ -90,14 +86,21 @@ class ViewController: UIViewController {
         }
     }
 
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
+
+//Metodos de Calcular
+extension ViewController {
     func calcTemperatura(){
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Farenheit"
-            resultado = String(temperatura * 1.8 + 32.0)
+            resultado = (temperatura * 1.8) + 32.0
         } else {
             lbResultadoUnit.text = "Celcius"
-            resultado = String((temperatura - 32 ) / 1.8)
+            resultado = (temperatura - 32 ) / 1.8
         }
     }
     
@@ -105,22 +108,21 @@ class ViewController: UIViewController {
         guard let peso = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Libra"
-            resultado = String(peso / 2.2046)
+            resultado = peso / 2.2046
         } else {
             lbResultadoUnit.text = "Kilograma"
-            resultado = String(peso * 2.2046)
+            resultado = peso * 2.2046
         }
-        
     }
     
     func calcMoeda(){
         guard let moeda = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Dolar"
-            resultado = String(moeda * 3.5)
+            resultado = moeda * 3.5
         } else {
             lbResultadoUnit.text = "Real"
-            resultado = String(moeda / 3.5)
+            resultado = moeda / 3.5
         }
     }
     
@@ -128,30 +130,10 @@ class ViewController: UIViewController {
         guard let distancia = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
             lbResultadoUnit.text = "Kilometro"
-            resultado = String(distancia / 1000.0)
+            resultado = distancia / 1000.0
         } else {
             lbResultadoUnit.text = "Metros"
-            resultado = String(distancia * 1000.0)
+            resultado = distancia * 1000.0
         }
     }
-    
-    func dismissKeyboard(){
-        //textField.resignFirstResponder()
-        view.endEditing(true)
-    }
-}
-
-extension String {
-   func maxLength(length: Int) -> String {
-       var str = self
-       let nsString = str as NSString
-       if nsString.length >= length {
-           str = nsString.substring(with:
-               NSRange(
-                location: 0,
-                length: nsString.length > length ? length : nsString.length)
-           )
-       }
-       return  str
-   }
 }
