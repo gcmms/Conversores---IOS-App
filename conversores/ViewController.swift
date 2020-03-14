@@ -19,7 +19,11 @@ enum Grandeza: String {
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
     @IBOutlet weak var lbUnit: UILabel!
-    var grandezaPath: Grandeza = .temperatura
+    var grandezaPath: Grandeza = .temperatura {
+        didSet {
+            edditText()
+        }
+    }
     //caixa de inserir texto!
     @IBOutlet weak var tfValor: UITextField!
     //bitão1
@@ -61,29 +65,39 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func edditText(){
+        switch grandezaPath {
+        case .peso:
+            lbUnit.text = "Peso"
+            btUnit1.setTitle("Kilograma", for: .normal)
+            btUnit2.setTitle("Libra", for: .normal)
+        case .moeda:
+            lbUnit.text = "Moeda"
+            btUnit1.setTitle("Real", for: .normal)
+            btUnit2.setTitle("Dolar", for: .normal)
+        case .distancia:
+            lbUnit.text = "Distancia"
+            btUnit1.setTitle("Metro", for: .normal)
+            btUnit2.setTitle("Kilometro", for: .normal)
+        case .temperatura:
+            lbUnit.text = "Temperatura"
+            btUnit1.setTitle("Celcius", for: .normal)
+            btUnit2.setTitle("Farenheint", for: .normal)
+        }
+        
+    }
+    
     @IBAction func showNext(_ sender: UIButton) {
         //lbUnit.text!
         switch grandezaPath {
         case .temperatura:
             grandezaPath = .peso
-            lbUnit.text = "Peso"
-            btUnit1.setTitle("Kilograma", for: .normal)
-            btUnit2.setTitle("Libra", for: .normal)
         case .peso:
             grandezaPath = .moeda
-            lbUnit.text = "Moeda"
-            btUnit1.setTitle("Real", for: .normal)
-            btUnit2.setTitle("Dolar", for: .normal)
         case .moeda:
             grandezaPath = .distancia
-            lbUnit.text = "Distancia"
-            btUnit1.setTitle("Metro", for: .normal)
-            btUnit2.setTitle("Kilometro", for: .normal)
         case .distancia:
             grandezaPath = .temperatura
-            lbUnit.text = "Temperatura"
-            btUnit1.setTitle("Celcius", for: .normal)
-            btUnit2.setTitle("Farenheint", for: .normal)
         }
         limpaValores()
         
