@@ -60,7 +60,6 @@ class ViewController: UIViewController {
         // ResetApp
         limpaValores()
         setBanner()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -202,37 +201,38 @@ extension ViewController: GADBannerViewDelegate {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
+        
     }
-    
+
+    // Called when an ad quest loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
+      print(#function)
     }
 
-    /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-        didFailToReceiveAdWithError error: GADRequestError) {
-      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    // Called when an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+      print("\(#function): \(error.localizedDescription)")
     }
 
-    /// Tells the delegate that a full-screen view will be presented in response
-    /// to the user clicking on an ad.
+    // Called just before presenting the user a full screen view, such as a browser, in response to
+    // clicking on an ad.
     func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("adViewWillPresentScreen")
+      print(#function)
     }
 
-    /// Tells the delegate that the full-screen view will be dismissed.
+    // Called just before dismissing a full screen view.
     func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewWillDismissScreen")
+      print(#function)
     }
 
-    /// Tells the delegate that the full-screen view has been dismissed.
+    // Called just after dismissing a full screen view.
     func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewDidDismissScreen")
+      print(#function)
     }
 
-    /// Tells the delegate that a user click will open another app (such as
-    /// the App Store), backgrounding the current app.
+    // Called just before the application will background or terminate because the user clicked on an
+    // ad that will launch another application (such as the App Store).
     func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-      print("adViewWillLeaveApplication")
+      print(#function)
     }
 }
