@@ -130,10 +130,17 @@
                                 <color key="textColor" red="0.28031980989999999" green="0.55005490290000003" blue="0.90070539709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-XD-bCV">
+                                <rect key="frame" x="47" y="812" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yd9-XD-bCV" firstAttribute="top" secondItem="nsw-kn-PI2" secondAttribute="bottom" constant="197.33000000000001" id="3gt-Zu-068"/>
                             <constraint firstItem="DgF-4d-iYA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5fO-wa-Gvx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yd9-XD-bCV" secondAttribute="trailing" constant="47" id="76Q-ET-f3n"/>
+                            <constraint firstItem="yd9-XD-bCV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7Uk-ha-99a"/>
                             <constraint firstItem="DgF-4d-iYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9da-U9-mID"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DgF-4d-iYA" secondAttribute="trailing" id="IAx-Tr-ASG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nsw-kn-PI2" secondAttribute="trailing" constant="20" id="M6y-ag-Gzs"/>
@@ -141,6 +148,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OMj-0u-sxQ" secondAttribute="trailing" constant="20" id="Qt9-Hh-34m"/>
                             <constraint firstItem="OMj-0u-sxQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZcS-RH-2i6"/>
                             <constraint firstItem="DgF-4d-iYA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="doF-aO-pwr"/>
+                            <constraint firstItem="yd9-XD-bCV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h7w-7k-brc"/>
+                            <constraint firstItem="yd9-XD-bCV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="ibJ-bV-uYg"/>
                             <constraint firstItem="DgF-4d-iYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kEi-lK-2b8"/>
                             <constraint firstItem="nsw-kn-PI2" firstAttribute="top" secondItem="OMj-0u-sxQ" secondAttribute="bottom" constant="8" id="oBb-fi-FBt"/>
                             <constraint firstItem="nsw-kn-PI2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wlX-m1-vdF"/>
@@ -148,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="yd9-XD-bCV" id="Orj-xB-vM2"/>
                         <outlet property="btUnit1" destination="NdY-A5-8SB" id="Rb3-YA-cQi"/>
                         <outlet property="btUnit2" destination="GxO-hS-Q2N" id="Nnl-LE-Xru"/>
                         <outlet property="lbGrandezaAtual" destination="YC6-mV-73o" id="Juy-2v-eWO"/>
