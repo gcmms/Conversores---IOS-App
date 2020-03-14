@@ -8,9 +8,22 @@
 
 import UIKit
 
+enum Grandeza: String {
+    case temperatura = "Temperatura"
+    case peso = "Peso"
+    case moeda = "Moeda"
+    case distancia = "Distancia"
+}
+
+
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
     @IBOutlet weak var lbUnit: UILabel!
+    var grandezaPath: Grandeza = .temperatura {
+        didSet {
+            edditText()
+        }
+    }
     //caixa de inserir texto!
     @IBOutlet weak var tfValor: UITextField!
     //bitão1
@@ -21,7 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbResultado: UILabel!
     var resultado: Double = 0.0 {
         didSet {
-            lbResultado.text = String(resultado).maxLength(length: 7)
+            lbResultado.text = String(resultado).maxLength(length: 5)
         }
     }
     @IBOutlet weak var lbGrandezaAtual: UILabel!
@@ -43,9 +56,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // ResetApp
-        grandezaAtual = "Celcius"
-        resultado = 0.0
-        grandezaConvertida = "Selecione"
+        limpaValores()
         
     }
     
@@ -54,27 +65,42 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func showNext(_ sender: UIButton) {
-        switch lbUnit.text! {
-        case "Temperatura":
+    func edditText(){
+        switch grandezaPath {
+        case .peso:
             lbUnit.text = "Peso"
             btUnit1.setTitle("Kilograma", for: .normal)
             btUnit2.setTitle("Libra", for: .normal)
-        case "Peso":
+        case .moeda:
             lbUnit.text = "Moeda"
             btUnit1.setTitle("Real", for: .normal)
             btUnit2.setTitle("Dolar", for: .normal)
-        case "Moeda":
+        case .distancia:
             lbUnit.text = "Distancia"
             btUnit1.setTitle("Metro", for: .normal)
             btUnit2.setTitle("Kilometro", for: .normal)
-        default:
+        case .temperatura:
             lbUnit.text = "Temperatura"
             btUnit1.setTitle("Celcius", for: .normal)
             btUnit2.setTitle("Farenheint", for: .normal)
-        
         }
-        converter(nil)
+        
+    }
+    
+    @IBAction func showNext(_ sender: UIButton) {
+        //lbUnit.text!
+        switch grandezaPath {
+        case .temperatura:
+            grandezaPath = .peso
+        case .peso:
+            grandezaPath = .moeda
+        case .moeda:
+            grandezaPath = .distancia
+        case .distancia:
+            grandezaPath = .temperatura
+        }
+        limpaValores()
+        
     }
     
     @IBAction func converter(_ sender: UIButton?) {
@@ -87,14 +113,14 @@ class ViewController: UIViewController {
             sender.alpha = 1.0
         }
        
-        switch lbUnit.text!{
-        case "Temperatura":
+        switch grandezaPath {
+        case  .temperatura:
             calcTemperatura()
-        case "Peso":
+        case .peso:
             calcPeso()
-        case "Moeda":
+        case .moeda:
             calcMoeda()
-        default:
+        case .distancia:
             calcDistancia()
         }
     }
@@ -102,6 +128,13 @@ class ViewController: UIViewController {
     func dismissKeyboard(){
         view.endEditing(true)
     }
+    
+    func limpaValores(){
+        resultado = 0.0
+        grandezaConvertida = ""
+        grandezaAtual = ""
+    }
+    
 }
 
 //Metodos de Calcular

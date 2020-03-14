@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Temperatura {
+class TemperaturaCalculadora {
     
+    var grandezaAtual: String?
+    var grandezaConvertida: String?
+    var resultado: Double?
     
-    init(viewController: ViewController) {
-        
+    init() {
     }
     
 }
