@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D463354241CA6F5001D89E6 /* Calculadora.swift */; };
+		0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC078D923EF287B001D52AB /* teste.storyboard */; };
+		0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */; };
+		0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */; };
 		5191732E22C4FA8100F86227 /* calculos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191732D22C4FA8000F86227 /* calculos.swift */; };
 		51ECA4C122C2A34F007D7DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */; };
 		51ECA4C322C2A34F007D7DEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ECA4C222C2A34F007D7DEE /* ViewController.swift */; };
 		51ECA4C622C2A34F007D7DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51ECA4C422C2A34F007D7DEE /* Main.storyboard */; };
 		51ECA4C822C2A350007D7DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51ECA4C722C2A350007D7DEE /* Assets.xcassets */; };
 		51ECA4CB22C2A350007D7DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */; };
+		AE82A9DAFBBA572A506E1777 /* Pods_conversores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569ED2F716F8FAD5BC50AA25 /* Pods_conversores.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conversores.release.xcconfig"; path = "Pods/Target Support Files/Pods-conversores/Pods-conversores.release.xcconfig"; sourceTree = "<group>"; };
+		0D463354241CA6F5001D89E6 /* Calculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculadora.swift; sourceTree = "<group>"; };
+		0DC078DA23EF287B001D52AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/teste.storyboard; sourceTree = "<group>"; };
+		0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaCalculadora.swift; sourceTree = "<group>"; };
+		0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5191732D22C4FA8000F86227 /* calculos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculos.swift; sourceTree = "<group>"; };
-		51ECA4BD22C2A34F007D7DEE /* conversores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conversores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51ECA4BD22C2A34F007D7DEE /* Conversores de Medidas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Conversores de Medidas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51ECA4C222C2A34F007D7DEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51ECA4C522C2A34F007D7DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51ECA4C722C2A350007D7DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51ECA4CA22C2A350007D7DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51ECA4CC22C2A350007D7DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		569ED2F716F8FAD5BC50AA25 /* Pods_conversores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conversores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D1C39413D56E50F617C891 /* Pods-conversores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conversores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conversores/Pods-conversores.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +43,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE82A9DAFBBA572A506E1777 /* Pods_conversores.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DE3C4DD241C19D100E2D00D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DE3C4DE241C19D100E2D00D /* Calculadora De Grandeza */,
+				0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */,
+			);
+			name = Model;
+			path = conversores/Model;
+			sourceTree = "<group>";
+		};
+		0DE3C4DE241C19D100E2D00D /* Calculadora De Grandeza */ = {
+			isa = PBXGroup;
+			children = (
+				0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */,
+				0D463354241CA6F5001D89E6 /* Calculadora.swift */,
+			);
+			path = "Calculadora De Grandeza";
+			sourceTree = "<group>";
+		};
 		51ECA4B422C2A34F007D7DEE = {
 			isa = PBXGroup;
 			children = (
+				0DE3C4DD241C19D100E2D00D /* Model */,
 				51ECA4BF22C2A34F007D7DEE /* conversores */,
 				51ECA4BE22C2A34F007D7DEE /* Products */,
+				B0AD2CB4CA585F6201D8722A /* Pods */,
+				614AF7F7ECDA27C13611F458 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		51ECA4BE22C2A34F007D7DEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51ECA4BD22C2A34F007D7DEE /* conversores.app */,
+				51ECA4BD22C2A34F007D7DEE /* Conversores de Medidas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +93,7 @@
 			children = (
 				51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */,
 				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
+				0DC078D923EF287B001D52AB /* teste.storyboard */,
 				51ECA4C422C2A34F007D7DEE /* Main.storyboard */,
 				51ECA4C722C2A350007D7DEE /* Assets.xcassets */,
 				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
@@ -67,6 +103,23 @@
 			path = conversores;
 			sourceTree = "<group>";
 		};
+		614AF7F7ECDA27C13611F458 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				569ED2F716F8FAD5BC50AA25 /* Pods_conversores.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0AD2CB4CA585F6201D8722A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77D1C39413D56E50F617C891 /* Pods-conversores.debug.xcconfig */,
+				0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51ECA4CF22C2A350007D7DEE /* Build configuration list for PBXNativeTarget "conversores" */;
 			buildPhases = (
+				C28D916980F97109DFD1E530 /* [CP] Check Pods Manifest.lock */,
 				51ECA4B922C2A34F007D7DEE /* Sources */,
 				51ECA4BA22C2A34F007D7DEE /* Frameworks */,
 				51ECA4BB22C2A34F007D7DEE /* Resources */,
+				2C822DAFA1F63CF2BEB8D73A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +139,7 @@
 			);
 			name = conversores;
 			productName = conversores;
-			productReference = 51ECA4BD22C2A34F007D7DEE /* conversores.app */;
+			productReference = 51ECA4BD22C2A34F007D7DEE /* Conversores de Medidas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */,
 				51ECA4CB22C2A350007D7DEE /* LaunchScreen.storyboard in Resources */,
 				51ECA4C822C2A350007D7DEE /* Assets.xcassets in Resources */,
 				51ECA4C622C2A34F007D7DEE /* Main.storyboard in Resources */,
@@ -133,6 +189,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C822DAFA1F63CF2BEB8D73A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-conversores/Pods-conversores-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-conversores/Pods-conversores-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28D916980F97109DFD1E530 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-conversores-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51ECA4B922C2A34F007D7DEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +245,9 @@
 			files = (
 				51ECA4C322C2A34F007D7DEE /* ViewController.swift in Sources */,
 				51ECA4C122C2A34F007D7DEE /* AppDelegate.swift in Sources */,
+				0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */,
+				0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */,
+				0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */,
 				5191732E22C4FA8100F86227 /* calculos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +255,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0DC078D923EF287B001D52AB /* teste.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DC078DA23EF287B001D52AB /* Base */,
+			);
+			name = teste.storyboard;
+			sourceTree = "<group>";
+		};
 		51ECA4C422C2A34F007D7DEE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,16 +400,18 @@
 		};
 		51ECA4D022C2A350007D7DEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D1C39413D56E50F617C891 /* Pods-conversores.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Conversores de Medidas";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -301,16 +419,18 @@
 		};
 		51ECA4D122C2A350007D7DEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Conversores de Medidas";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

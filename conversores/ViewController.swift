@@ -7,55 +7,102 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
+enum Grandeza: String {
+    case temperatura = "Temperatura"
+    case peso = "Peso"
+    case moeda = "Moeda"
+    case distancia = "Distancia"
+}
+
 
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
     @IBOutlet weak var lbUnit: UILabel!
+    var grandezaPath: Grandeza = .temperatura {
+        didSet {
+            edditText()
+        }
+    }
     //caixa de inserir texto!
     @IBOutlet weak var tfValor: UITextField!
+    @IBOutlet weak var bannerView: GADBannerView!
     //bitão1
     @IBOutlet weak var btUnit1: UIButton!
     //botao2
     @IBOutlet weak var btUnit2: UIButton!
     //resultado
     @IBOutlet weak var lbResultado: UILabel!
-    //Variavel do resultado
-    var resultado: String! {
+    var resultado: Double = 0.0 {
         didSet {
-            lbResultado.text = resultado.maxLength(length: 7)
+            lbResultado.text = String(resultado).maxLength(length: 5)
         }
     }
+    @IBOutlet weak var lbGrandezaAtual: UILabel!
+    var grandezaAtual: String = "" {
+        didSet {
+            lbGrandezaAtual.text = grandezaAtual
+        }
+    }
+    
     //@IBOutlet weak var lbResultadoUnit: UILabel!
     @IBOutlet weak var lbResultadoUnit: UILabel!
+    var grandezaConvertida: String = "" {
+        didSet {
+            lbResultadoUnit.text = grandezaConvertida
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // ResetApp
+        limpaValores()
+        setBanner()
     }
-
     
-    @IBAction func showNext(_ sender: UIButton) {
-        switch lbUnit.text! {
-        case "Temperatura":
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func edditText(){
+        switch grandezaPath {
+        case .peso:
             lbUnit.text = "Peso"
             btUnit1.setTitle("Kilograma", for: .normal)
             btUnit2.setTitle("Libra", for: .normal)
-        case "Peso":
+        case .moeda:
             lbUnit.text = "Moeda"
             btUnit1.setTitle("Real", for: .normal)
             btUnit2.setTitle("Dolar", for: .normal)
-        case "Moeda":
+        case .distancia:
             lbUnit.text = "Distancia"
             btUnit1.setTitle("Metro", for: .normal)
             btUnit2.setTitle("Kilometro", for: .normal)
-        default:
+        case .temperatura:
             lbUnit.text = "Temperatura"
             btUnit1.setTitle("Celcius", for: .normal)
             btUnit2.setTitle("Farenheint", for: .normal)
-        
         }
-        converter(nil)
+        
+    }
+    
+    @IBAction func showNext(_ sender: UIButton) {
+        //lbUnit.text!
+        switch grandezaPath {
+        case .temperatura:
+            grandezaPath = .peso
+        case .peso:
+            grandezaPath = .moeda
+        case .moeda:
+            grandezaPath = .distancia
+        case .distancia:
+            grandezaPath = .temperatura
+        }
+        limpaValores()
+        
     }
     
     @IBAction func converter(_ sender: UIButton?) {
@@ -68,79 +115,125 @@ class ViewController: UIViewController {
             sender.alpha = 1.0
         }
        
-        switch lbUnit.text!{
-        case "Temperatura":
+        switch grandezaPath {
+        case  .temperatura:
             calcTemperatura()
-        case "Peso":
-            //teste()
+        case .peso:
             calcPeso()
-        case "Moeda":
-            //teste()
+        case .moeda:
             calcMoeda()
-        default:
-            //teste()
+        case .distancia:
             calcDistancia()
-            
         }
     }
 
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    func limpaValores(){
+        resultado = 0.0
+        grandezaConvertida = ""
+        grandezaAtual = ""
+    }
+    
+}
+
+//Metodos de Calcular
+extension ViewController {
     func calcTemperatura(){
         guard let temperatura = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Farenheit"
-            resultado = String(temperatura * 1.8 + 32.0)
+            grandezaConvertida = "Farenheit"
+            grandezaAtual = "Celcius"
+            resultado = (temperatura * 1.8) + 32.0
         } else {
-            lbResultadoUnit.text = "Celcius"
-            resultado = String((temperatura - 32 ) / 1.8)
+            grandezaConvertida = "Celcius"
+            grandezaAtual = "Farenheit"
+            resultado = (temperatura - 32 ) / 1.8
         }
     }
     
     func calcPeso(){
         guard let peso = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Libra"
-            resultado = String(peso / 2.2046)
+            grandezaConvertida = "Libra"
+            grandezaAtual = "Kilograma"
+            resultado = peso / 2.2046
         } else {
-            lbResultadoUnit.text = "Kilograma"
-            resultado = String(peso * 2.2046)
+            grandezaConvertida = "Kilograma"
+            grandezaAtual = "Libra"
+            resultado = peso * 2.2046
         }
-        
     }
     
     func calcMoeda(){
         guard let moeda = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Dolar"
-            resultado = String(moeda * 3.5)
+            grandezaConvertida = "Dolar"
+            grandezaAtual = "Real"
+            resultado = moeda * 3.5
         } else {
-            lbResultadoUnit.text = "Real"
-            resultado = String(moeda / 3.5)
+            grandezaConvertida = "Real"
+            grandezaAtual = "Dolar"
+            resultado = moeda / 3.5
         }
     }
     
     func calcDistancia(){
         guard let distancia = Double(tfValor.text!) else {return}
         if btUnit1.alpha == 1.0 {
-            lbResultadoUnit.text = "Kilometro"
-            resultado = String(distancia / 1000.0)
+            grandezaConvertida = "Kilometro"
+            grandezaAtual = "Metros"
+            resultado = distancia / 1000.0
         } else {
-            lbResultadoUnit.text = "Metros"
-            resultado = String(distancia * 1000.0)
+            grandezaConvertida = "Metros"
+            grandezaAtual = "Kilometro"
+            resultado = distancia * 1000.0
         }
     }
 }
 
-extension String {
-   func maxLength(length: Int) -> String {
-       var str = self
-       let nsString = str as NSString
-       if nsString.length >= length {
-           str = nsString.substring(with:
-               NSRange(
-                location: 0,
-                length: nsString.length > length ? length : nsString.length)
-           )
-       }
-       return  str
-   }
+//Banner Extension
+extension ViewController: GADBannerViewDelegate {
+    func setBanner(){
+        //ca-app-pub-6788444705913971/1129522067
+        bannerView.adUnitID = "ca-app-pub-6788444705913971/1129522067"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
+    }
+
+    // Called when an ad quest loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called when an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+      print("\(#function): \(error.localizedDescription)")
+    }
+
+    // Called just before presenting the user a full screen view, such as a browser, in response to
+    // clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just before dismissing a full screen view.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just after dismissing a full screen view.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just before the application will background or terminate because the user clicked on an
+    // ad that will launch another application (such as the App Store).
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print(#function)
+    }
 }
