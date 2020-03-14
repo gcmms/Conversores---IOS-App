@@ -197,6 +197,7 @@ extension ViewController {
 //Banner Extension
 extension ViewController: GADBannerViewDelegate {
     func setBanner(){
+        //ca-app-pub-6788444705913971/1129522067
         bannerView.adUnitID = "ca-app-pub-6788444705913971/1129522067"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
