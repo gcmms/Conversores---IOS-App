@@ -1,20 +1,17 @@
 //
-//  Temperatura.swift
+//  Calculadora.swift
 //  conversores
 //
-//  Created by Gabriel Sanzone on 13/03/20.
+//  Created by Gabriel Sanzone on 14/03/20.
 //  Copyright © 2020 Gabriel Chirico Mahtuk de Melo Sanzone. All rights reserved.
 //
 
 import Foundation
 
-class TemperaturaCalculadora {
-    
+
+class Calculadora {
     var grandezaAtual: String?
     var grandezaConvertida: String?
     var resultado: Double?
-    
-    init() {
-    }
     
 }
