@@ -7,5 +7,6 @@ target 'conversores' do
 
   # Pods for conversores
 	pod 'Google-Mobile-Ads-SDK'
+	pod 'Firebase/Analytics'
 
 end
