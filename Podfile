@@ -8,5 +8,8 @@ target 'conversores' do
   # Pods for conversores
 	pod 'Google-Mobile-Ads-SDK'
 	pod 'Firebase/Analytics'
+# Pods for PodTest
+	pod 'Fabric', '~> 1.10.2'
+	pod 'Crashlytics', '~> 3.14.0'
 
 end

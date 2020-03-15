@@ -135,6 +135,7 @@
 				51ECA4BA22C2A34F007D7DEE /* Frameworks */,
 				51ECA4BB22C2A34F007D7DEE /* Resources */,
 				2C822DAFA1F63CF2BEB8D73A /* [CP] Embed Pods Frameworks */,
+				0D98717D241DE96D00DFEE31 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,6 +195,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D98717D241DE96D00DFEE31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		2C822DAFA1F63CF2BEB8D73A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
