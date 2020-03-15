@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>853058690873-ebfit4kfk0ah6vs8bk2pmsl8kcumjih0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.853058690873-ebfit4kfk0ah6vs8bk2pmsl8kcumjih0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAw0jug41nQH-MqOfl_Q3I0o0AZgxXv0kM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>853058690873</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ga.gcmms.conversores</string>
+	<key>PROJECT_ID</key>
+	<string>conversor-de-medidas</string>
+	<key>STORAGE_BUCKET</key>
+	<string>conversor-de-medidas.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:853058690873:ios:b37afc4d7a7fd8f90452e8</string>
+	<key>DATABASE_URL</key>
+	<string>https://conversor-de-medidas.firebaseio.com</string>
+</dict>
+</plist>

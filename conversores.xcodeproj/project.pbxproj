@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D463354241CA6F5001D89E6 /* Calculadora.swift */; };
+		0D98717C241DE6BD00DFEE31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */; };
 		0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC078D923EF287B001D52AB /* teste.storyboard */; };
 		0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */; };
 		0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conversores.release.xcconfig"; path = "Pods/Target Support Files/Pods-conversores/Pods-conversores.release.xcconfig"; sourceTree = "<group>"; };
 		0D463354241CA6F5001D89E6 /* Calculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculadora.swift; sourceTree = "<group>"; };
+		0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0DC078DA23EF287B001D52AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/teste.storyboard; sourceTree = "<group>"; };
 		0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaCalculadora.swift; sourceTree = "<group>"; };
 		0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
 				51ECA4CC22C2A350007D7DEE /* Info.plist */,
 				5191732D22C4FA8000F86227 /* calculos.swift */,
+				0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */,
 			);
 			path = conversores;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */,
 				51ECA4CB22C2A350007D7DEE /* LaunchScreen.storyboard in Resources */,
+				0D98717C241DE6BD00DFEE31 /* GoogleService-Info.plist in Resources */,
 				51ECA4C822C2A350007D7DEE /* Assets.xcassets in Resources */,
 				51ECA4C622C2A34F007D7DEE /* Main.storyboard in Resources */,
 			);
