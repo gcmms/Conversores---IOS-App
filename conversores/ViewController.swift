@@ -187,6 +187,7 @@ extension ViewController {
             grandezaAtual = "Metros"
             resultado = distancia / 1000.0
         } else {
+            
             grandezaConvertida = "Metros"
             grandezaAtual = "Kilometro"
             resultado = distancia * 1000.0
@@ -197,7 +198,6 @@ extension ViewController {
 //Banner Extension
 extension ViewController: GADBannerViewDelegate {
     func setBanner(){
-        //ca-app-pub-6788444705913971/1129522067
         bannerView.adUnitID = "ca-app-pub-6788444705913971/1129522067"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
