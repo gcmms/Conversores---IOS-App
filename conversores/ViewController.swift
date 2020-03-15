@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 enum Grandeza: String {
     case temperatura = "Temperatura"
@@ -18,7 +19,12 @@ enum Grandeza: String {
 
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
-    @IBOutlet weak var lbUnit: UILabel!
+    @IBOutlet weak var btGrandezaTitulo: UIButton!
+    var grandezaTitulo: String = "Temperatura" {
+        didSet {
+            btGrandezaTitulo.setTitle(grandezaTitulo, for: .normal)
+        }
+    }
     var grandezaPath: Grandeza = .temperatura {
         didSet {
             edditText()
@@ -26,6 +32,7 @@ class ViewController: UIViewController {
     }
     //caixa de inserir texto!
     @IBOutlet weak var tfValor: UITextField!
+    @IBOutlet weak var bannerView: GADBannerView!
     //bitão1
     @IBOutlet weak var btUnit1: UIButton!
     //botao2
@@ -57,7 +64,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // ResetApp
         limpaValores()
-        
+        setBanner()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -68,19 +75,19 @@ class ViewController: UIViewController {
     func edditText(){
         switch grandezaPath {
         case .peso:
-            lbUnit.text = "Peso"
+            grandezaTitulo = "Peso"
             btUnit1.setTitle("Kilograma", for: .normal)
             btUnit2.setTitle("Libra", for: .normal)
         case .moeda:
-            lbUnit.text = "Moeda"
+            grandezaTitulo = "Moeda"
             btUnit1.setTitle("Real", for: .normal)
             btUnit2.setTitle("Dolar", for: .normal)
         case .distancia:
-            lbUnit.text = "Distancia"
+            grandezaTitulo = "Distancia"
             btUnit1.setTitle("Metro", for: .normal)
             btUnit2.setTitle("Kilometro", for: .normal)
         case .temperatura:
-            lbUnit.text = "Temperatura"
+            grandezaTitulo = "Temperatura"
             btUnit1.setTitle("Celcius", for: .normal)
             btUnit2.setTitle("Farenheint", for: .normal)
         }
@@ -185,9 +192,53 @@ extension ViewController {
             grandezaAtual = "Metros"
             resultado = distancia / 1000.0
         } else {
+            
             grandezaConvertida = "Metros"
             grandezaAtual = "Kilometro"
             resultado = distancia * 1000.0
         }
+    }
+}
+
+//Banner Extension
+extension ViewController: GADBannerViewDelegate {
+    func setBanner(){
+        bannerView.adUnitID = "ca-app-pub-6788444705913971/1129522067"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
+    }
+
+    // Called when an ad quest loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called when an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+      print("\(#function): \(error.localizedDescription)")
+    }
+
+    // Called just before presenting the user a full screen view, such as a browser, in response to
+    // clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just before dismissing a full screen view.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just after dismissing a full screen view.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print(#function)
+    }
+
+    // Called just before the application will background or terminate because the user clicked on an
+    // ad that will launch another application (such as the App Store).
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print(#function)
     }
 }
