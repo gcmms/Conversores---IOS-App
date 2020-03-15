@@ -19,7 +19,12 @@ enum Grandeza: String {
 
 class ViewController: UIViewController {
     //texto do que esta sendo convertido
-    @IBOutlet weak var lbUnit: UILabel!
+    @IBOutlet weak var btGrandezaTitulo: UIButton!
+    var grandezaTitulo: String = "Temperatura" {
+        didSet {
+            btGrandezaTitulo.setTitle(grandezaTitulo, for: .normal)
+        }
+    }
     var grandezaPath: Grandeza = .temperatura {
         didSet {
             edditText()
@@ -70,19 +75,19 @@ class ViewController: UIViewController {
     func edditText(){
         switch grandezaPath {
         case .peso:
-            lbUnit.text = "Peso"
+            grandezaTitulo = "Peso"
             btUnit1.setTitle("Kilograma", for: .normal)
             btUnit2.setTitle("Libra", for: .normal)
         case .moeda:
-            lbUnit.text = "Moeda"
+            grandezaTitulo = "Moeda"
             btUnit1.setTitle("Real", for: .normal)
             btUnit2.setTitle("Dolar", for: .normal)
         case .distancia:
-            lbUnit.text = "Distancia"
+            grandezaTitulo = "Distancia"
             btUnit1.setTitle("Metro", for: .normal)
             btUnit2.setTitle("Kilometro", for: .normal)
         case .temperatura:
-            lbUnit.text = "Temperatura"
+            grandezaTitulo = "Temperatura"
             btUnit1.setTitle("Celcius", for: .normal)
             btUnit2.setTitle("Farenheint", for: .normal)
         }

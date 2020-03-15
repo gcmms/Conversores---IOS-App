@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,14 +11,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="conversores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="DgF-4d-iYA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="357"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-ko-4Px">
-                                        <rect key="frame" x="112" y="44" width="190" height="43"/>
+                                        <rect key="frame" x="205" y="44" width="190" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="R4d-ko-4Px" secondAttribute="height" multiplier="190:43" id="kxR-p1-siD"/>
                                         </constraints>
@@ -40,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxO-hS-Q2N">
-                                        <rect key="frame" x="316" y="307" width="78" height="42"/>
+                                        <rect key="frame" x="502" y="307" width="78" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <state key="normal" title="Celcius">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa7-Jz-3vt">
-                                        <rect key="frame" x="361" y="44" width="33" height="46"/>
+                                        <rect key="frame" x="547" y="44" width="33" height="46"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="28"/>
                                         <state key="normal" title="&gt;&gt;">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-jV-xU7">
-                                        <rect key="frame" x="57" y="159" width="300" height="59"/>
+                                        <rect key="frame" x="150" y="159" width="300" height="59"/>
                                         <color key="backgroundColor" red="0.28031980991363525" green="0.55005490289975523" blue="0.90070539712905884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Q6H-jV-xU7" secondAttribute="height" multiplier="66:13" id="hlH-y8-4rm"/>
@@ -95,13 +93,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-0u-sxQ">
-                                <rect key="frame" x="176" y="449" width="62" height="115"/>
+                                <rect key="frame" x="269" y="449" width="62" height="115"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="96"/>
                                 <color key="textColor" red="0.28031980989999999" green="0.55005490290000003" blue="0.90070539709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-kn-PI2">
-                                <rect key="frame" x="8" y="572" width="398" height="40"/>
+                                <rect key="frame" x="8" y="310" width="584" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" red="0.28031980989999999" green="0.55005490290000003" blue="0.90070539709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -133,9 +131,9 @@
                     <connections>
                         <outlet property="btUnit1" destination="NdY-A5-8SB" id="Rb3-YA-cQi"/>
                         <outlet property="btUnit2" destination="GxO-hS-Q2N" id="Nnl-LE-Xru"/>
+                        <outlet property="grandezaTitulo" destination="R4d-ko-4Px" id="GYU-yS-SwG"/>
                         <outlet property="lbResultado" destination="OMj-0u-sxQ" id="Ja0-8p-gd9"/>
                         <outlet property="lbResultadoUnit" destination="nsw-kn-PI2" id="DTn-xM-TLy"/>
-                        <outlet property="lbUnit" destination="R4d-ko-4Px" id="GYU-yS-SwG"/>
                         <outlet property="tfValor" destination="Q6H-jV-xU7" id="6Ts-pf-KAB"/>
                     </connections>
                 </viewController>
@@ -148,7 +146,7 @@
             <objects>
                 <viewController id="3RF-Cu-igh" customClass="HomeViewController" customModule="conversores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cry-gJ-dBX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcD-ri-u6C">
