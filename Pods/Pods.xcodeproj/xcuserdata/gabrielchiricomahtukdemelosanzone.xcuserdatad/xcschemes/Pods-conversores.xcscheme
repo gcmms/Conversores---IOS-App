@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73F6AB702D543583D82F68B7B0B9FF4B"
+               BlueprintIdentifier = "D0FB0221179CBC5AE5B82497C36D73AF"
                BuildableName = "Pods_conversores.framework"
                BlueprintName = "Pods-conversores"
                ReferencedContainer = "container:Pods.xcodeproj">

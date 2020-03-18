@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         //Init Firebase
         FirebaseApp.configure()
+        Fabric.sharedSDK().debug = true
         // Override point for customization after application launch.
         return true
     }

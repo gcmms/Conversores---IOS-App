@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D463354241CA6F5001D89E6 /* Calculadora.swift */; };
 		0D98717C241DE6BD00DFEE31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */; };
+		0D99B19D241E559B00735CF2 /* GrandezaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D99B19C241E559B00735CF2 /* GrandezaTableViewController.swift */; };
 		0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC078D923EF287B001D52AB /* teste.storyboard */; };
 		0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */; };
 		0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */; };
@@ -25,6 +26,7 @@
 		0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conversores.release.xcconfig"; path = "Pods/Target Support Files/Pods-conversores/Pods-conversores.release.xcconfig"; sourceTree = "<group>"; };
 		0D463354241CA6F5001D89E6 /* Calculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculadora.swift; sourceTree = "<group>"; };
 		0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0D99B19C241E559B00735CF2 /* GrandezaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandezaTableViewController.swift; sourceTree = "<group>"; };
 		0DC078DA23EF287B001D52AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/teste.storyboard; sourceTree = "<group>"; };
 		0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaCalculadora.swift; sourceTree = "<group>"; };
 		0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -52,6 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D99B19B241E556900735CF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
+				0DC078D923EF287B001D52AB /* teste.storyboard */,
+				51ECA4C422C2A34F007D7DEE /* Main.storyboard */,
+				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
+				0D99B19C241E559B00735CF2 /* GrandezaTableViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		0DE3C4DD241C19D100E2D00D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +88,7 @@
 		51ECA4B422C2A34F007D7DEE = {
 			isa = PBXGroup;
 			children = (
+				0D99B19B241E556900735CF2 /* View */,
 				0DE3C4DD241C19D100E2D00D /* Model */,
 				51ECA4BF22C2A34F007D7DEE /* conversores */,
 				51ECA4BE22C2A34F007D7DEE /* Products */,
@@ -94,11 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */,
-				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
-				0DC078D923EF287B001D52AB /* teste.storyboard */,
-				51ECA4C422C2A34F007D7DEE /* Main.storyboard */,
 				51ECA4C722C2A350007D7DEE /* Assets.xcassets */,
-				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
 				51ECA4CC22C2A350007D7DEE /* Info.plist */,
 				5191732D22C4FA8000F86227 /* calculos.swift */,
 				0D98717B241DE6BD00DFEE31 /* GoogleService-Info.plist */,
@@ -222,6 +233,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-conversores/Pods-conversores-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -229,6 +241,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +281,7 @@
 				51ECA4C322C2A34F007D7DEE /* ViewController.swift in Sources */,
 				51ECA4C122C2A34F007D7DEE /* AppDelegate.swift in Sources */,
 				0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */,
+				0D99B19D241E559B00735CF2 /* GrandezaTableViewController.swift in Sources */,
 				0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */,
 				0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */,
 				5191732E22C4FA8100F86227 /* calculos.swift in Sources */,
@@ -425,6 +439,7 @@
 			baseConfigurationReference = 77D1C39413D56E50F617C891 /* Pods-conversores.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
@@ -433,8 +448,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
+				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversor;
 				PRODUCT_NAME = "Conversores de Medidas";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -445,6 +461,7 @@
 			baseConfigurationReference = 0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
@@ -452,8 +469,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
+				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversor;
 				PRODUCT_NAME = "Conversores de Medidas";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -469,7 +487,7 @@
 				51ECA4CE22C2A350007D7DEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		51ECA4CF22C2A350007D7DEE /* Build configuration list for PBXNativeTarget "conversores" */ = {
 			isa = XCConfigurationList;
@@ -478,7 +496,7 @@
 				51ECA4D122C2A350007D7DEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

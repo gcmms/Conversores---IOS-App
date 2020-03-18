@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMobileAds
+import Firebase
+import Crashlytics
 
 enum Grandeza: String {
     case temperatura = "Temperatura"
@@ -59,12 +61,18 @@ class ViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // ResetApp
         limpaValores()
         setBanner()
+        setCrashlyticsConfig()
+        
+    }
+    
+    func setCrashlyticsConfig(){
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -95,6 +103,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showNext(_ sender: UIButton) {
+        //Crashlytics.sharedInstance().crash()
         //lbUnit.text!
         switch grandezaPath {
         case .temperatura:
