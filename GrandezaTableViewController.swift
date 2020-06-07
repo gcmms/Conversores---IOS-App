@@ -10,6 +10,10 @@ import UIKit
 
 class GrandezaTableViewController: UITableViewController {
 
+    let tableData = ["Temperatura: Celcius em Farenheint", "Temperatura: Farenheint em Celcius" , "Peso: Kilograma em Libra", "Peso: Libra em Kilograma", "Moeda: Real em Dolar", "Moeda: Dolar em Real", "Distancia: Metro em Kilometro", "Distancia: Kilometro em Metro" ]
+    
+    var touchIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,22 +21,23 @@ class GrandezaTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return tableData.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "grandezaIdentifier", for: indexPath)
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.touchIndex = indexPath.row
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -79,4 +84,13 @@ class GrandezaTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+extension GrandezaTableViewController {
+    
+}
+
+extension GrandezaTableViewController {
+    
 }

@@ -46,6 +46,8 @@ class ViewController: UIViewController {
             lbResultado.text = String(resultado).maxLength(length: 5)
         }
     }
+    
+
     @IBOutlet weak var lbGrandezaAtual: UILabel!
     var grandezaAtual: String = "" {
         didSet {
@@ -71,8 +73,7 @@ class ViewController: UIViewController {
     }
     
     func setCrashlyticsConfig(){
-        
-        
+       // Crashlytics.sharedInstance().crash()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
