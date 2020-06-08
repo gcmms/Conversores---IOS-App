@@ -33,7 +33,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -47,4 +47,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 5866090ca9b091d0a9730c694baf2b6ab493c1a5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

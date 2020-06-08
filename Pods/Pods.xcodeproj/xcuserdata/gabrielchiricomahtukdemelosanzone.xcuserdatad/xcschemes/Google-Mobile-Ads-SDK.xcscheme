@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2B5E7DCCBBFB32341D857D01211A1A3"
-               BuildableName = "nanopb.framework"
-               BlueprintName = "nanopb"
+               BlueprintIdentifier = "FEA3B3A570634836C0457F3D7CEF1699"
+               BuildableName = "Google-Mobile-Ads-SDK"
+               BlueprintName = "Google-Mobile-Ads-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
