@@ -397,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -404,7 +405,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversor;
 				PRODUCT_NAME = "Conversores de Medidas";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -417,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
 				INFOPLIST_FILE = conversores/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -424,7 +427,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversores;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = ga.gcmms.conversor;
 				PRODUCT_NAME = "Conversores de Medidas";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
