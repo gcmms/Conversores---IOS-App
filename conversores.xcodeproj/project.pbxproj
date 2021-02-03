@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D463354241CA6F5001D89E6 /* Calculadora.swift */; };
+		0D96F63525CB1E48008CB950 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D96F63325CB1E48008CB950 /* HomeViewController.swift */; };
+		0D96F63625CB1E48008CB950 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D96F63425CB1E48008CB950 /* HomeViewController.xib */; };
 		0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC078D923EF287B001D52AB /* teste.storyboard */; };
 		0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */; };
 		0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		0158DADA2CC3325451AC428A /* Pods-conversores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conversores.release.xcconfig"; path = "Pods/Target Support Files/Pods-conversores/Pods-conversores.release.xcconfig"; sourceTree = "<group>"; };
 		0D463354241CA6F5001D89E6 /* Calculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculadora.swift; sourceTree = "<group>"; };
+		0D96F63325CB1E48008CB950 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0D96F63425CB1E48008CB950 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		0DC078DA23EF287B001D52AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/teste.storyboard; sourceTree = "<group>"; };
 		0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaCalculadora.swift; sourceTree = "<group>"; };
 		0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -50,30 +54,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DE3C4DD241C19D100E2D00D /* Model */ = {
+		0D96F62925CB1CBC008CB950 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				0DE3C4DE241C19D100E2D00D /* Calculadora De Grandeza */,
-				0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */,
+				0D96F63D25CB20C6008CB950 /* Componentes */,
+				0D96F62B25CB1CF8008CB950 /* Support File */,
+				0D96F62A25CB1CD6008CB950 /* Extension */,
+				0DE3C4DD241C19D100E2D00D /* Model */,
 			);
-			name = Model;
-			path = conversores/Model;
+			path = Global;
 			sourceTree = "<group>";
 		};
-		0DE3C4DE241C19D100E2D00D /* Calculadora De Grandeza */ = {
+		0D96F62A25CB1CD6008CB950 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0DE3C4E2241C1EC300E2D00D /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0D96F62B25CB1CF8008CB950 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				51ECA4CC22C2A350007D7DEE /* Info.plist */,
+				51ECA4C722C2A350007D7DEE /* Assets.xcassets */,
+				51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		0D96F62E25CB1D6E008CB950 /* Modulos */ = {
+			isa = PBXGroup;
+			children = (
+				0D96F63225CB1E21008CB950 /* Legado */,
+				0D96F63025CB1D7B008CB950 /* Home */,
+			);
+			path = Modulos;
+			sourceTree = "<group>";
+		};
+		0D96F63025CB1D7B008CB950 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0D96F63325CB1E48008CB950 /* HomeViewController.swift */,
+				0D96F63425CB1E48008CB950 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0D96F63225CB1E21008CB950 /* Legado */ = {
+			isa = PBXGroup;
+			children = (
+				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
+				5191732D22C4FA8000F86227 /* calculos.swift */,
+				0DC078D923EF287B001D52AB /* teste.storyboard */,
+				51ECA4C422C2A34F007D7DEE /* Main.storyboard */,
+				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
+			);
+			path = Legado;
+			sourceTree = "<group>";
+		};
+		0D96F63D25CB20C6008CB950 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				0D96F63E25CB20CE008CB950 /* TableViewCell */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		0D96F63E25CB20CE008CB950 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D96F63F25CB20D7008CB950 /* SelectTypeHomeCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		0D96F63F25CB20D7008CB950 /* SelectTypeHomeCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectTypeHomeCell;
+			sourceTree = "<group>";
+		};
+		0DE3C4DD241C19D100E2D00D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0DE3C4E0241C19D100E2D00D /* TemperaturaCalculadora.swift */,
 				0D463354241CA6F5001D89E6 /* Calculadora.swift */,
 			);
-			path = "Calculadora De Grandeza";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		51ECA4B422C2A34F007D7DEE = {
 			isa = PBXGroup;
 			children = (
-				0DE3C4DD241C19D100E2D00D /* Model */,
-				51ECA4BF22C2A34F007D7DEE /* conversores */,
+				51ECA4BF22C2A34F007D7DEE /* Conversores */,
 				51ECA4BE22C2A34F007D7DEE /* Products */,
 				B0AD2CB4CA585F6201D8722A /* Pods */,
 				614AF7F7ECDA27C13611F458 /* Frameworks */,
@@ -88,19 +163,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		51ECA4BF22C2A34F007D7DEE /* conversores */ = {
+		51ECA4BF22C2A34F007D7DEE /* Conversores */ = {
 			isa = PBXGroup;
 			children = (
-				51ECA4C022C2A34F007D7DEE /* AppDelegate.swift */,
-				51ECA4C222C2A34F007D7DEE /* ViewController.swift */,
-				0DC078D923EF287B001D52AB /* teste.storyboard */,
-				51ECA4C422C2A34F007D7DEE /* Main.storyboard */,
-				51ECA4C722C2A350007D7DEE /* Assets.xcassets */,
-				51ECA4C922C2A350007D7DEE /* LaunchScreen.storyboard */,
-				51ECA4CC22C2A350007D7DEE /* Info.plist */,
-				5191732D22C4FA8000F86227 /* calculos.swift */,
+				0D96F62925CB1CBC008CB950 /* Global */,
+				0D96F62E25CB1D6E008CB950 /* Modulos */,
 			);
-			path = conversores;
+			path = Conversores;
 			sourceTree = "<group>";
 		};
 		614AF7F7ECDA27C13611F458 /* Frameworks */ = {
@@ -182,6 +251,7 @@
 			files = (
 				0DC078DB23EF287B001D52AB /* teste.storyboard in Resources */,
 				51ECA4CB22C2A350007D7DEE /* LaunchScreen.storyboard in Resources */,
+				0D96F63625CB1E48008CB950 /* HomeViewController.xib in Resources */,
 				51ECA4C822C2A350007D7DEE /* Assets.xcassets in Resources */,
 				51ECA4C622C2A34F007D7DEE /* Main.storyboard in Resources */,
 			);
@@ -248,6 +318,7 @@
 				0DE3C4E3241C1EC300E2D00D /* StringExtension.swift in Sources */,
 				0DE3C4E1241C19D100E2D00D /* TemperaturaCalculadora.swift in Sources */,
 				0D463355241CA6F5001D89E6 /* Calculadora.swift in Sources */,
+				0D96F63525CB1E48008CB950 /* HomeViewController.swift in Sources */,
 				5191732E22C4FA8100F86227 /* calculos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
-				INFOPLIST_FILE = conversores/Info.plist;
+				INFOPLIST_FILE = "Conversores/Global/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7WMR3QZR6;
-				INFOPLIST_FILE = conversores/Info.plist;
+				INFOPLIST_FILE = "Conversores/Global/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
